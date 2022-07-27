@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "node -r ts-swc-register ./script/index.ts dev",
-    "build": "node -r ts-swc-register ./script/index.ts prod && cargo build --release"
+    "build": "node -r ts-swc-register ./script/index.ts prod"
   },
   "author": "",
   "license": "ISC",
