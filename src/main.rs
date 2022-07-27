@@ -29,7 +29,8 @@ fn main() {
     let server = UiServer::new();
     bus.init(&dialog, &browser);
     browser.init(dialog.hwnd, atl.ax_get_host(dialog.explorer()).unwrap());
-    let url = match cfg!(debug_assertions) {
+    let dev = cfg!(debug_assertions) && false;
+    let url = match dev {
         // run `npm run dev` on `/web` for debug
         true => "http://127.0.0.1:10010".to_string(),
         false => server.run(res.webzip()),
