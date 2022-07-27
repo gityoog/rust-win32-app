@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <link rel="stylesheet" href="./static/loading.css?<%= htmlWebpackPlugin.options.version %>">
+</head>
+
+<body>
+  <div id="app">
+    <div v-show="false" class="index-loading"></div>
+  </div>
+  <script>
+    var VERSION = '<%= htmlWebpackPlugin.options.version %>'
+    var MAP_TILE_LAYER = eval('<%= htmlWebpackPlugin.options.mapTileLayer %>')
+    var BASE_URL = '<%= htmlWebpackPlugin.options.baseurl %>'
+    var SOCK_URL = '<%= htmlWebpackPlugin.options.sockurl %>'
+    var INDEX_URL = '<%= htmlWebpackPlugin.options.indexurl %>'
+    var SYS_NAME = '<%= htmlWebpackPlugin.options.title %>'
+    var LOGIN_TO_URL = '<%= htmlWebpackPlugin.options.logintourl %>'
+    var CESIUM_BASE_URL = './static/cesium'
+  </script>
+  <script src="./static/js/polyfill.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.layout {
+  position: relative;
+  height: 100%;
+  display: flex;
+
+  >.left {
+    height: 100%;
+  }
+
+  >.right {
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    >.header {
+      height: 30px;
+      // background: #3c3c3c;
+    }
+
+    >.content {
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+
+
+  >.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1e;
+    z-index: -1;
+
+    >.img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(./skin3.jpg);
+      // background-image: url(./skin.jpg);
+      // opacity: 0.1;
+    }
+  }
+
+  >.resize {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    // background: red;
+    z-index: 1;
+    cursor: nw-resize;
+  }
+}

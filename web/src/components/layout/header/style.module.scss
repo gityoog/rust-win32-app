@@ -1,0 +1,36 @@
+.header {
+  height: 40px;
+  display: flex;
+  // background: #333;
+
+  >.left {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .right {
+    display: flex;
+
+    >.tool {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      >.icon {
+        padding: 15px;
+
+        svg {
+          width: 12px;
+          height: 12px;
+          fill: #ccc;
+        }
+
+        &:hover {
+          svg {
+            fill: #67FFA3;
+          }
+        }
+      }
+    }
+  }
+}

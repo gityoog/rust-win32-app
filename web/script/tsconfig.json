@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitThis": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "target": "ES6",
+    "baseUrl": "."
+  },
+  "include": [
+    "./**/*"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "noImplicitThis": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "module": "esnext",
+    "target": "es5",
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "paths": {
+      "@/*": [
+        "./module/*"
+      ]
+    }
+  },
+  "files": [
+    "./global.d.ts",
+    "./module.d.ts"
+  ],
+  "include": [
+    "./**/*"
+  ]
+}

@@ -1,0 +1,45 @@
+[package]
+name = "web-app"
+version = "1.0.0"
+edition = "2021"
+build = "build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = { version = "0.14", default-features = false, features = ["server","runtime","http1", "http2"] }
+tokio = { version = "1.20.1", default-features = false, features = ["rt", "rt-multi-thread"] }
+portpicker = { version = "0.1.1", default-features = false, features = [] }
+zip = { version = "0.6.2", default-features = false, features = ["deflate"] }
+
+[build-dependencies]
+embed-resource = "1.6"
+
+[dependencies.windows]
+version = "0.38.0"
+features = [
+    "interface",
+    "implement",
+    "alloc",
+    "Data_Xml_Dom",
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_System_LibraryLoader",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Gdi",
+    "Win32_System_Com",
+    "Win32_UI_Shell",
+    "Win32_System_Ole",
+    "Win32_Web_MsHtml",
+    "Win32_System_Memory",
+    "Win32_Storage_FileSystem", 
+    "Win32_Media_KernelStreaming",
+    "Win32_System_Registry",
+    "Win32_UI_Input_KeyboardAndMouse"
+]
+
+[profile.release]
+lto = true
+panic = 'abort'
+strip = true

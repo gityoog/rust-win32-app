@@ -1,0 +1,77 @@
+@mixin icon {
+  height: 34px;
+  width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #777;
+  border-radius: 4px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    color: #999;
+  }
+}
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background: rgba($color: #333, $alpha: 0.6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  >.top {
+    >.logo {
+      color: rgba($color: #67FFA3, $alpha: 1);
+      font-size: 20px;
+      padding: 10px 0;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  >.center {
+    flex: 1;
+    overflow: hidden;
+
+    >.nav {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      >.icon {
+        @include icon;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        &.actived {
+          background-color: rgba($color: #67FFA3, $alpha: 1);
+          color: #333;
+        }
+      }
+    }
+  }
+
+  >.bottom {
+    >.setting {
+      @include icon;
+    }
+
+    padding: 10px 0;
+  }
+}
