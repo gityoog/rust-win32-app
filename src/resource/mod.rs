@@ -35,7 +35,7 @@ impl Resource {
             let hresdata = LoadResource(self.handle, hresinfo);
             let buffer = std::slice::from_raw_parts(
                 LockResource(hresdata) as *mut u8,
-                (SizeofResource(self.handle, hresinfo)).try_into().unwrap(),
+                SizeofResource(self.handle, hresinfo) as usize,
             );
             FreeResource(hresdata);
             buffer
